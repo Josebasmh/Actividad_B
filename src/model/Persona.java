@@ -6,7 +6,7 @@ public class Persona {
 
 	// Variables de clase
 	private String sNombre,sAppelidos;
-	private int nEdad;
+	private Integer nEdad;
 
 	
 	// Constructor
@@ -34,7 +34,7 @@ public class Persona {
 		this.sAppelidos = sAppelidos;
 	}
 
-	public int getnEdad() {
+	public Integer getnEdad() {
 		return nEdad;
 	}
 
