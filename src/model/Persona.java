@@ -3,7 +3,12 @@ package model;
 import java.util.Objects;
 
 
-
+/**
+ * Clase pública para almacenarse en la lista generada en el controlador.
+ * @param String nombre
+ * @param String apellidos
+ * @param int edad
+ */
 public class Persona {
 
 	// Variables de clase

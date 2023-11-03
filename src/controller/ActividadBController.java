@@ -17,6 +17,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import model.Persona;
 
 public class ActividadBController implements Initializable{
@@ -47,9 +48,10 @@ public class ActividadBController implements Initializable{
 	
 	private ObservableList<Persona> listaPersonas;
 
-	/*
-	 * Método de inicialización
-	 */
+	/**
+	 * Al iniciar la ventana, se enlazan las columnas con un arrayList que guarda las
+	 * personas registradas.
+	 */ 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		listaPersonas = FXCollections.observableArrayList();
@@ -62,9 +64,9 @@ public class ActividadBController implements Initializable{
 		tblTabla.setItems(listaPersonas);		
 	}
 		
-	/*
+	/**
 	 * Método para agregar personas a la tabla.
-	 * Se controla que los campos no pueden ser nulos y que el campo edad sea un número mayor que 1.
+	 * Se controla que los campos no pueden ser nulos y que el campo edad sea un número entero mayor que 1.
 	 */
 	@FXML
     void agregarPersona(ActionEvent event) {
@@ -96,8 +98,10 @@ public class ActividadBController implements Initializable{
 		
     }
 	
-	/*
-	 * Metodo auxiliar para mostrar alertas de tipo error o confirmación
+	/**
+	 * Metodo auxiliar para mostrar alertas de tipo error o confirmación.
+	 * @param tipoAlerta
+	 * @param mensaje
 	 */
 	void ventanaAlerta(String tipoAlerta, String mensaje) {
 		Alert alert = null;
@@ -113,6 +117,3 @@ public class ActividadBController implements Initializable{
 	}
 	
 }
-
-	
-
